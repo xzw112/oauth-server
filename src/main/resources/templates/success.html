@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>成功</title>
+</head>
+<body>
+
+<h6>登录成功！</h6>
+
+
+<!--/*@thymesVar id="token" type=""*/-->
+<input type="hidden" id="token" th:value="${token}"/>
+
+<input type="submit" name="tiaozhuan" id="tiaozhuan" value="跳转8081首页" onclick="toWard()"/>
+
+<input type="submit" name="tuichu" id="tuichu" value="退出" onclick="logout()"/>
+
+<a href="/logout">退出</a>
+
+
+<!-- jQuery 3 -->
+<script th:src="@{/js/jquery/jquery.min.js}"></script>
+
+<script th:src="@{/js/success.js}"></script>
+
+
+</body>
+</html>
